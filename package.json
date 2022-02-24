@@ -3,7 +3,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "cd server && npm run start",
+    "start": "cd server && npm run start:prod",
     "build": "cd client && npm install --production=false && cd ../server && npm install && npm run build"
   }
 }
