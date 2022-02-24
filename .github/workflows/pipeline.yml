@@ -22,4 +22,4 @@ jobs:
       - name: client - install dependencies
         run: cd client && npm install
       - name: server - install dependencies
-        run: cd ../server && npm install
+        run: cd server && npm install
