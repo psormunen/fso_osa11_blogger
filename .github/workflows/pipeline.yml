@@ -38,6 +38,6 @@ jobs:
       - name: run build
         run: cd server && npm run build
       - name: start testing server
-        run: cd server && npm run start:test
+        run: cd server && npm run start:test & npx wait-on http://localhost:3003
       - name: run e2e-tests
         run: cd server && npm run test:e2e
