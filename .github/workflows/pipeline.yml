@@ -41,3 +41,15 @@ jobs:
         run: cd server && npm run start:test & npx wait-on http://localhost:3003
       - name: run e2e-tests
         run: cd server && npm run test:e2e
+      - name: deployment
+        id: herokuDeployment
+        if: ${{ (github.event_name == 'push') && !(contains(join(toJson(github.event.commits.*.message)),'#skip')) }}
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "fso-osa11-blogger"
+          heroku_email: ${{secrets.HEROKU_API_USER}}
+          healthcheck: "https://fso-osa11-blogger.herokuapp.com/health"
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
+          appdir: "server"
