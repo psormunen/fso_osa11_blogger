@@ -52,4 +52,3 @@ jobs:
           healthcheck: "https://fso-osa11-blogger.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
-          appdir: "server"
