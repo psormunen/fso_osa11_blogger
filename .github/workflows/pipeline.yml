@@ -49,4 +49,8 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "fso-osa11-blogger"
           heroku_email: ${{secrets.HEROKU_API_USER}}
+          healthcheck: "https://fso-osa11-blogger.herokuapp.com/health"
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
+          delay: 5
           
