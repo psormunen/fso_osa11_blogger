@@ -4,6 +4,6 @@
   },
   "scripts": {
     "start": "cd server && npm run start",
-    "build": "cd client && npm install && cd ../server && npm install && npm run build"
+    "build": "cd client && npm install --production=false && cd ../server && npm install && npm run build"
   }
 }
