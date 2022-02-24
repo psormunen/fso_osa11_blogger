@@ -7,7 +7,7 @@ describe('Testing blog application', function() {
       password: 'WERWWERWER-1'
     }
     cy.request('POST', 'http://localhost:3003/api/users/', user)
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:3003')
   })
 
   it('At first we see login-form', function() {
@@ -117,7 +117,7 @@ describe('Testing blog application', function() {
         password: 'WERWWERWER-2'
       }
       cy.request('POST', 'http://localhost:3003/api/users/', user)
-      cy.visit('http://localhost:3000')
+      cy.visit('http://localhost:3003')
 
       cy.login_user({ username: 'app-user-2', password: 'WERWWERWER-2' })
 

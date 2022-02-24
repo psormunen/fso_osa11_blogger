@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
     "start:test": "cross-env NODE_ENV=test node index.js",
-    "build": "rm -rf build && cd ../client && npm run build && mv build ../server"
+    "build": "rm -rf build && cd ../client && npm run build && mv build ../server",
+    "lint:client": "cd ../client && npm run eslint",
+    "test:e2e": "cd ../client && npm run test:e2e"
   },
   "author": "psormunen",
   "license": "MIT",
