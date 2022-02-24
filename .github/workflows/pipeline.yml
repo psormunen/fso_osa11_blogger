@@ -23,3 +23,5 @@ jobs:
         run: cd client && npm install
       - name: server - install dependencies
         run: cd server && npm install
+      - name: check linting
+        run: cd server && npm run lint && npm run lint:client
