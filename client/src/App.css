@@ -1,0 +1,44 @@
+button:hover {
+  cursor: pointer;
+}
+
+.alert {
+  border: 3px;
+  border-radius: 0.5rem;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.alert.warning {
+  color:rgb(136, 9, 26);
+  background-color: rgb(255, 92, 92);
+}
+
+.alert.success {
+  color:rgb(1, 61, 58);
+  background-color: rgb(107, 250, 107);
+}
+
+.input-label {
+  min-width: 100px;
+  display: inline-block;
+  background-color: rgb(241 241 241);
+  text-align: center;
+  border: 1px solid #8a949e;
+  padding: 0.1rem;
+}
+
+.simple-container {
+  border: 1px solid #1d1e1f;
+  padding: 0.3rem;
+  margin-bottom: 5px;
+}
+
+.warning-button {
+  background-color: rgb(228, 68, 68);
+  border-color: rgb(253, 143, 99);
+  color: #ffffff;
+  padding: 0.1rem;
+  margin-top: 2px;
+}

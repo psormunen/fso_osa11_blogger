@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer SET-TOKEN-HERE
+
+{
+  "title": "Howto create node backend",
+  "author": "Neil Ranger",
+  "url": "/this/is/new/blog",
+  "likes": 3
+}
