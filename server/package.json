@@ -13,6 +13,7 @@
     "lint:client": "cd ../client && npm run eslint",
     "test:e2e": "cd ../client && npm run test:e2e"
   },
+  "heroku-run-build-script": false,
   "author": "psormunen",
   "license": "MIT",
   "dependencies": {
