@@ -19,6 +19,11 @@ jobs:
       - name: Starting tests
         run: |
           echo "Starting tests!"
+          cd server && touch .env
+          echo TEST_MONGODB_URI=${{secrets.TEST_MONGODB_URI}} >> .env
+          echo SECRET=${{secrets.SECRET}} >> .env
+          echo PORT=${{secrets.PORT}} >> .env
+          cat .env
       - name: client - install dependencies
         run: cd client && npm install
       - name: server - install dependencies
