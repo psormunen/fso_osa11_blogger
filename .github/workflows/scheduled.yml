@@ -1,0 +1,16 @@
+name: Scheduled tests
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+
+jobs:
+  scheduled_tests:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check deployed URL
+        uses: jtalk/url-health-check-action@v2
+        with:
+          url: https://fso-osa11-blogger.herokuapp.com
+          max-attempts: 2
+          retry-delay: 5s
